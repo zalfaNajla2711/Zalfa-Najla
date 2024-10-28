@@ -1,0 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package lat.pkg22_perhitungan_lingkaran;
+
+/**
+ *
+ * @author hp5cd
+ */
+import java.util.Scanner;
+public class Lat22_Perhitungan_Lingkaran {
+
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            double diameter = 0;
+            boolean inputValid = false;
+            
+            System.out.println("======Perhitungan Lingkaran======");
+            
+            // Looping untuk meminta input diameter hingga input sesuai
+            while (!inputValid) {
+                System.out.print("Masukkan nilai diameter lingkaran : ");
+                String input = scanner.nextLine();
+                
+                try {
+                    // Coba konversi input ke tipe double
+                    diameter = Double.parseDouble(input);
+                    if (diameter <= 0) {
+                        System.out.println("Nilai Diameter Tidak Sesuai");
+                    } else {
+                        inputValid = true;
+                    }
+                } catch (NumberFormatException e) {
+                    // Jika input bukan angka, tampilkan pesan error
+                    System.out.println("Nilai Diameter Tidak Sesuai");
+                }
+            }
+            
+            // Jika input valid, hitung jari-jari, luas, dan keliling lingkaran
+            double jariJari = diameter / 2;
+            double luas = Math.PI * Math.pow(jariJari, 2);
+            double keliling = Math.PI * diameter;
+            
+            // Tampilkan hasil perhitungan
+            System.out.printf("Jari-jari Lingkaran = %.2f cm%n", jariJari);
+            System.out.printf("Luas Lingkaran = %.2f cm²%n", luas);
+            System.out.printf("Keliling Lingkaran = %.2f cm%n", keliling);
+        }
+    }
+}
