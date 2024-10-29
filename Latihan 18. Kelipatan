@@ -7,6 +7,14 @@ package kelipatantigalima;
 /**
  *
  * @author hp5cd
+ * NAMA: Zalfa Dhia Najla
+ * KELAS: PBO12
+ * NIM: 23176008
+ * PRODI: Sistem Informasi
+ * SEMESTER: 3
+ * Deskripsi Program: Program ini berisi program untuk menampilkan
+ * program kelipatan
+ * 
  */
 public class KelipatanTigaLima {
     public static void main(String[] args) {
